@@ -1,0 +1,17 @@
+server:
+  port: 9010
+spring:
+  datasource:
+    url: "jdbc:postgresql://revaturetraining.czulldeaqcpw.us-east-2.rds.amazonaws.com/flash_cards"
+    username: ${flashCardUser}
+    password: ${flashCardPassword}
+    driver-class-name: "org.postgresql.Driver"
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: "org.hibernate.dialect.PostgreSQLDialect"
+    show-sql: true
+    hibernate:
+      ddl-auto: update
